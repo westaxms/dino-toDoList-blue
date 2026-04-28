@@ -1,0 +1,516 @@
+
+
+
+/************************************************* mobile ****************************************/
+
+
+@media (min-width: 360px) and (max-width: 428px) {
+
+    .sec-col {
+        margin-top: 10px;
+        padding-bottom: 10px;
+        width: 90%;
+        margin: 10px;
+    }
+
+
+    .sec-nav {
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 200px;
+
+    }
+
+    .date {
+        border-radius: 12px;
+        padding: 15px;
+        margin-top: 25px;
+    }
+
+
+    .sec-input {
+        margin-top: 30px;
+        margin-left: 30px;
+        width: 200px;
+        height: 40px;
+        transition: all 0.3s ease;
+    }
+
+    .sec-btn {
+        height: 35px;
+        margin: 5px;
+    }
+
+    .sec-list {
+        margin-top: 20px;
+        word-break: break-word;
+        margin-left: 0;
+        width: auto;
+
+    }
+
+    .btn-filter-div {
+        margin-left: 30px;
+        margin-top: 20px;
+        width: 250px;
+        padding: 5px;
+    }
+
+    span {
+        margin-top: 10px;
+        margin-left: 5px;
+        word-break: break-word;
+        display: flex;
+    }
+
+
+    .dino-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .progress-box {
+        height: 60px;
+        margin-top: 50px;
+        border-radius: 10px;
+        margin-left: 30px;
+        width: 250px;
+    }
+
+    .dino {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.4s ease;
+        margin-left: 5px;
+        transition: left 0.4s ease;
+
+    }
+
+
+    .cactus {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+    .dino.jump {
+        animation: dinoJump 0.8s ease;
+    }
+
+    .progress-box.hit {
+        animation: shake 0.3s;
+    }
+
+    .ground {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        height: 2px;
+        width: 100%; 
+        background-size: 40px 4px;
+        animation: groundMove 1s linear infinite;
+    }
+
+
+    @keyframes taskFade {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .sec-list {
+        animation: taskFade 0.3s ease;
+    }
+
+
+
+    @keyframes groundMove {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+
+
+    @keyframes groundMove {
+        from {
+            background-position-x: 0;
+        }
+        to {
+            background-position-x: -40px;
+        }
+    }
+
+
+    @keyframes dinoJump {
+        0%   { transform: translateY(-50%); }
+        30%  { transform: translateY(-120%); }
+        60%  { transform: translateY(-120%); }
+        100% { transform: translateY(-50%); }
+    }
+}
+
+
+
+/****************************************** ipad *****************************************/
+
+@media (min-width: 429px) and (max-width: 768px) {
+
+    .sec-col {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+    margin: 10px;
+    }
+
+    .sec-nav {
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 200px;
+
+    }
+
+    .sec-input {
+        margin-top: 30px;
+        margin-left: 30px;
+        width: 200px;
+        height: 40px;
+    }
+
+    .sec-btn {
+        height: 35px;
+        margin: 5px;
+    }
+
+    .sec-list {
+        margin-top: 20px;
+        word-break: break-word;
+        margin-left: 0;
+        width: auto;
+
+    }
+
+    .btn-filter-div {
+        margin-left: 30px;
+        margin-top: 20px;
+        width: 250px;
+        padding: 5px;
+    }
+
+    span {
+        margin-top: 10px;
+        margin-left: 5px;
+        word-break: break-word;
+        display: flex;
+
+    }
+
+    .date {
+        border-radius: 12px;
+        padding: 15px;
+        margin-top: 25px;
+    }
+
+    .progress-box {
+        height: 60px;
+        margin-top: 50px;
+        border-radius: 10px;
+        margin-left: 30px;
+        width: 250px;
+    }
+
+    .dino-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+/* ***************************************** ipad **************************************** */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .sec-col {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+    margin: 10px;
+    }
+
+    .dino-group {
+    display: flex;
+    flex-direction: column;
+}
+    .progress-box {
+    height: 60px;
+    margin-top: 50px;
+    border-radius: 10px;
+    margin-left: 30px;
+    width: 250px;
+}
+
+    .sec-nav {
+        padding: 10px;
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 200px;
+
+    }
+
+    .sec-input {
+        margin-top: 30px;
+        margin-left: 30px;
+        width: 200px;
+        height: 40px;
+
+    }
+
+    .sec-btn {
+        height: 35px;
+        margin: 5px;
+    }
+
+    .sec-list {
+        margin-top: 20px;
+        word-break: break-word;
+        margin-left: 0;
+        width: 450px;
+
+    }
+
+    .btn-filter-div {
+        margin-left: 30px;
+        margin-top: 20px;
+        width: 250px;
+        padding: 5px;
+    }
+
+    span {
+        margin-top: 10px;
+        margin-left: 5px;
+        word-break: break-word;
+        display: flex;
+
+    }
+
+    .date {
+        border-radius: 12px;
+        padding: 15px;
+        margin-top: 25px;
+    }
+
+}
+
+
+
+/********************************************* pc ********************************************  */
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+
+
+    .sec-col {
+        margin-top: 30px;
+        padding-bottom: 30px;
+        width: 100%;
+        border-radius: 10px;
+        height: 768px;
+        margin-bottom: 30px;
+
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+
+    .sec-col::-webkit-scrollbar {
+        display: none;
+    }
+
+    .sec-nav {
+        padding: 10px;
+        margin-top: 40px;
+        margin-left: 50px;
+        width: 350px;
+
+    }
+
+    .sec-input {
+        padding: 10px;
+        margin-top: 40px;
+        margin-left: 50px;
+        width: 250px;
+        transition: all 0.3s ease;
+    }
+
+    .sec-btn {
+        height: 40px;
+        margin-left: 10px;
+    }
+
+    .sec-list {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding: 15px;
+        width: 650px;
+        list-style: none;
+        font-size: 15px;
+        min-width: 250px;
+        animation: taskFade 0.3s ease;
+
+        word-break: break-word; 
+
+    }
+
+    .btn-filter-div {
+        margin-left: 50px;
+        margin-top: 20px;
+        width: 350px;
+        padding: 5px;
+    }
+
+    .btn-filter {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .btn-edit {
+        margin-left: 5px;
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+
+    .btn-delete {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+
+
+
+    .checkbox {
+        width: 22px;
+        height: 22px;
+        margin: 5px;
+    }
+
+    span {
+        margin-top: 10px;
+        margin-left: 5px;
+        word-break: break-word;
+        display: flex;
+    }
+
+    .date {
+        padding: 15px;
+        margin-top: 25px;
+    }
+
+    .dino-group {
+        display: flex;
+    }
+
+    .progress-box {
+        position: relative;
+        width: 450px;
+        height: 80px;
+        margin-top: 50px;
+        margin-left: 160px;
+    }
+
+    .dino {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.4s ease;
+        margin-left: 5px;
+        transition: left 0.4s ease;
+
+    }
+
+    .cactus {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+
+
+    .dino.jump {
+        animation: dinoJump 0.8s ease;
+    }
+
+    .progress-box.hit {
+        animation: shake 0.3s;
+    }
+
+    .ground {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        background-size: 40px 4px; 
+        animation: groundMove 1s linear infinite;
+
+        height: 2px;
+        
+        background: repeating-linear-gradient(
+            to right,
+            #717171 0px,
+            #717171 20px,
+            transparent 20px,
+            transparent 40px
+        );
+    }
+
+
+@keyframes dinoJump {
+    0%   { transform: translateY(-50%); }
+    30%  { transform: translateY(-120%); }
+    60%  { transform: translateY(-120%); }
+    100% { transform: translateY(-50%); }
+}
+
+@keyframes groundMove {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+@keyframes groundMove {
+    from {
+        background-position-x: 0;
+    }
+    to {
+        background-position-x: -40px;
+    }
+}
+
+@keyframes taskFade {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+}
