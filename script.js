@@ -88,67 +88,69 @@ function renderTasks() {
         filteredTasks = tasks.filter(task => task.completed)
     }
 
-    filteredTasks.forEach((task, index) => {
-        const liDOM = document.createElement("li")
-        liDOM.classList.add("sec-list")
+    filteredTasks.forEach((task) => {
+    const index = tasks.indexOf(task)
 
-        const checkbox = document.createElement("input")
-        checkbox.type = "checkbox"
-        checkbox.checked = task.completed
-        checkbox.classList.add("checkbox")
+    const liDOM = document.createElement("li")
+    liDOM.classList.add("sec-list")
 
-        const span = document.createElement("span")
-        span.classList.add("span")
-        span.textContent = task.text
+    const checkbox = document.createElement("input")
+    checkbox.type = "checkbox"
+    checkbox.checked = task.completed
+    checkbox.classList.add("checkbox")
 
-        if (task.completed) {
-            span.classList.add("completed")
-        }
+    const span = document.createElement("span")
+    span.classList.add("span")
+    span.textContent = task.text
 
-        const btnGroup = document.createElement("div")
+    if (task.completed) {
+        span.classList.add("completed")
+    }
 
-        const editBtn = document.createElement("button")
-        editBtn.innerHTML = editSVG
-        editBtn.classList.add("btn-edit")
+    const btnGroup = document.createElement("div")
 
-        const deleteBtn = document.createElement("button")
-        deleteBtn.innerHTML = deleteSVG
-        deleteBtn.classList.add("btn-delete")
+    const editBtn = document.createElement("button")
+    editBtn.innerHTML = editSVG
+    editBtn.classList.add("btn-edit")
 
-        // checkbox
-        checkbox.addEventListener("change", function () {
-            tasks[index].completed = checkbox.checked
-            saveTasks()
-            renderTasks()
-        })
+    const deleteBtn = document.createElement("button")
+    deleteBtn.innerHTML = deleteSVG
+    deleteBtn.classList.add("btn-delete")
 
-        // delete
-        deleteBtn.addEventListener("click", function () {
-            tasks.splice(index, 1)
-            saveTasks()
-            renderTasks()
-        })
-
-        // edit
-        editBtn.addEventListener("click", function () {
-            const newTask = prompt("Yeni görev:")
-
-            if (newTask !== null && newTask.trim() !== "") {
-                tasks[index].text = newTask
-                saveTasks()
-                renderTasks()
-            }
-        })
-
-        btnGroup.appendChild(editBtn)
-        btnGroup.appendChild(deleteBtn)
-
-        liDOM.appendChild(checkbox)
-        liDOM.appendChild(span)
-        liDOM.appendChild(btnGroup)
-
-        listDOM.appendChild(liDOM)
+    //  checkbox
+    checkbox.addEventListener("change", function () {
+        tasks[index].completed = checkbox.checked
+        saveTasks()
+        renderTasks()
     })
+
+    //  delete
+    deleteBtn.addEventListener("click", function () {
+        tasks.splice(index, 1)
+        saveTasks()
+        renderTasks()
+    })
+
+    //  edit
+    editBtn.addEventListener("click", function () {
+        const newTask = prompt("Yeni görev:")
+
+        if (newTask !== null && newTask.trim() !== "") {
+            tasks[index].text = newTask
+            saveTasks()
+            renderTasks()
+        }
+    })
+
+    btnGroup.appendChild(editBtn)
+    btnGroup.appendChild(deleteBtn)
+
+    liDOM.appendChild(checkbox)
+    liDOM.appendChild(span)
+    liDOM.appendChild(btnGroup)
+
+    listDOM.appendChild(liDOM)
+})
     updateGround()
     updateProgress()
 }
